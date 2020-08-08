@@ -358,6 +358,30 @@ public class NameSort implements Comparator<PersonInfo> {
 
 
 
+package com.adressbook;
+
+import java.util.Comparator;
+
+public class ZipSort implements Comparator<PersonInfo> 
+{
+
+	@Override
+	public int compare(PersonInfo o3, PersonInfo o4) {
+		
+		if(o3.zip==o4.zip)
+			return 0;
+		else if(o3.zip>=o4.zip)
+			return 1;
+		else
+			return -1;
+		
+	}
+
+}
+
+
+
+
 
 
 
