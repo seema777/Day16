@@ -152,3 +152,118 @@ public void sortByZip() {
 
 
 
+
+package com.adressbook;
+import java.util.Comparator;
+
+import javax.swing.*; 
+class PersonInfo 
+{
+String fname; 
+String lname;
+String city;
+String state;
+int zip;
+String address; 
+long phoneNm;
+
+
+public PersonInfo(String fn,String ln,String a,String c,String s,int z,long p) {
+ fname = fn;
+ lname=ln;
+ address = a;
+ city=c;
+ state=s;
+ zip=z;
+ phoneNm = p;
+
+}
+
+
+public String getFname() {
+	return fname;
+}
+
+
+public void setFname(String fname) {
+	this.fname = fname;
+}
+
+
+public String getLname() {
+	return lname;
+}
+
+
+public void setLname(String lname) {
+	this.lname = lname;
+}
+
+
+public String getCity() {
+	return city;
+}
+
+
+public void setCity(String city) {
+	this.city = city;
+}
+
+
+public String getState() {
+	return state;
+}
+
+
+public void setState(String state) {
+	this.state = state;
+}
+
+
+public int getZip() {
+	return zip;
+}
+
+
+public void setZip(int zip) {
+	this.zip = zip;
+}
+
+
+public String getAddress() {
+	return address;
+}
+
+
+public void setAddress(String address) {
+	this.address = address;
+}
+
+
+public long getPhoneNm() {
+	return phoneNm;
+}
+
+
+public void setPhoneNm(long phoneNm) {
+	this.phoneNm = phoneNm;
+}
+
+
+@Override
+public String toString() {
+	return "PersonInfo [fname=" + fname + ", city=" + city + ", state=" + state + ", zip=" + zip
+			+ ", address=" + address + ", phoneNm=" + phoneNm + "]";
+}
+
+
+
+
+public void print( ) {
+	System.out.println("Name----LastName-----Address----City----State---ZipCode----Phone Number");
+	System.out.println(fname+"----"+lname+"-----"+address+"-----"+city+"----"+state+"-----"+zip+"---"+phoneNm);
+}
+}
+
+
+
