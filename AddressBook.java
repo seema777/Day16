@@ -267,3 +267,81 @@ public void print( ) {
 
 
 
+
+package com.adressbook;
+
+import java.util.Scanner;
+
+public class Test {
+public static void main	(String args[]) {
+AddressBook ab = new AddressBook(); 
+String input, s;
+int ch; 
+	String ans="y";
+	while(ans!="N") {
+		 Scanner sc= new Scanner(System.in);
+
+		
+				 System.out.println("1.ADD\n2.Search\n3.Edit\n4.Delete\n5.Sort ByName\n6.Sort ByZipcode\n7.Exit");
+				 System.out.println("Enter a Option :\t");
+				 Scanner sc= new Scanner(System.in);
+				 ch=sc.nextInt();
+				switch (ch)
+				{ 
+				case 1:
+					System.out.println("Enter  Name :\t");
+					String name=sc.next();
+					System.out.println("Enter Last Name :\t");
+					String lname=sc.next();
+					System.out.println("Enter Address :\t");
+					String address=sc.next();
+					System.out.println("Enter City :\t");
+					String city=sc.next();
+					System.out.println("Enter State :\t");
+					String state=sc.next();
+					System.out.println("Enter ZipCode :\t");
+					int zip=sc.nextInt();
+					System.out.println("Enter Phone Number :\t");
+					long phoneNm=sc.nextLong();
+				
+				ab.addPerson(name,lname, address, city, state, zip, phoneNm);
+					       break;
+				case 2:
+					ab.displayPerson();
+					System.out.println("Enter name to search");
+					s=sc.next();
+					ab.searchPerson(s); 
+					break;
+					case 3:
+						System.out.println("Enter Name to of Person to edit the details:\t");
+						String x=sc.next();
+						ab.editPerson(x);
+						 break;
+					case 4:
+						 System.out.println("Enter name to delete");
+						 s=sc.next();
+						ab.deletePerson(s);
+						ab.displayPerson();
+							break;
+					case 5:
+							ab.sortByName();
+							break;
+					case 6: 
+							ab.sortByZip();
+							break;
+					case 7:
+							System.exit(0);
+							break;
+				}
+							
+
+}
+}
+}
+
+
+
+
+
+
+
