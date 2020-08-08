@@ -342,6 +342,23 @@ int ch;
 
 
 
+package com.adressbook;
+
+import java.util.Comparator;
+
+public class NameSort implements Comparator<PersonInfo> {
+
+	@Override
+	public int compare(PersonInfo o1, PersonInfo o2) {
+		
+		return o1.fname.compareTo(o2.fname);
+	}
+}
+
+
+
+
+
 
 
 
